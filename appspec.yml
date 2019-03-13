@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ubuntu/website
+hooks:
+  BeforeInstall:
+    - location: ./cleanup.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: ./start.sh
+      timeout: 24000
+      runas: root
