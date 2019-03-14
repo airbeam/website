@@ -17,7 +17,7 @@ function Home() {
         <h3>
           This site is under construction, email inquiries to: 
 
-          {'  '}<a href="mailto:sales@airbeamtec.com">sales@airbeamtec.com</a>
+          {'  '}<a href="mailto:sales@airbeamtech.com">sales@airbeamtech.com</a>
         </h3>
       </div>
 
