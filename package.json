@@ -2,11 +2,16 @@
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
+    "@zeit/next-css": "^1.0.1",
     "babel-plugin-emotion": "^10.0.9",
     "emotion": "^10.0.9",
     "next": "^8.0.3",
+    "nuka-carousel": "^4.5.2",
+    "pure-react-carousel": "^1.19.0",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "react-slick": "^0.23.2",
+    "slick-carousel": "^1.8.1"
   },
   "scripts": {
     "dev": "next",
