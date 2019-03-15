@@ -1,0 +1,10 @@
+
+ body {
+  background-image: url(/static/background.png); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: right -120px bottom; 
+}
+
+
+
