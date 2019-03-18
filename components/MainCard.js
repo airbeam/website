@@ -27,7 +27,8 @@ const styles = theme => ({
   nametextField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit,
-    width: "70%"
+
+    
   },
   dense: {
     marginTop: 16
@@ -170,13 +171,19 @@ function SimpleCard(props) {
       />
       <div
         className={css`
-          display: flex;
-          align-self: center;
-          justify-content: space-around;
+       
           
         `}
       >
-        <TextField
+      <div
+      className={css`
+      display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+      `}
+      >
+      <TextField
           id="outlined-name"
           label="First Name"
           className={classes.nametextField}
@@ -194,6 +201,9 @@ function SimpleCard(props) {
           margin="normal"
           variant="outlined"
         />
+
+      </div>
+      
       </div>
 
       <TextField
