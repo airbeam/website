@@ -172,7 +172,8 @@ function SimpleCard(props) {
         className={css`
           display: flex;
           align-self: center;
-          justify-content: center;
+          justify-content: space-around;
+          
         `}
       >
         <TextField
