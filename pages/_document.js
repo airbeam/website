@@ -30,6 +30,8 @@ class MyDocument extends Document {
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
           />
           <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+          <script src="https://sdk.amazonaws.com/js/aws-sdk-2.422.0.min.js" />
         </Head>
         <body>
           <Main />
