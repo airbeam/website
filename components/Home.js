@@ -15,6 +15,7 @@ import "./main.css";
 function Home({ style }) {
   return (
     <div>
+      {console.log(process.env)}
       <Header />
       <Slide />
       <div
