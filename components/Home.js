@@ -1,21 +1,20 @@
-import Divider from "@material-ui/core/Divider";
-import Typography from "@material-ui/core/Typography";
+import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
 
-import Header from "./Header";
-import Footer from "./Footer";
-import { css } from "emotion";
-import Slide from "./Slider";
-import MobileIcon from "./MobileIcon";
-import MainCard from "./MainCard";
-import ContactCard from "./ContactCard";
-import { Global, jsx } from "@emotion/core";
+import Header from './Header';
+import Footer from './Footer';
+import { css } from 'emotion';
+import Slide from './Slider';
+import MobileIcon from './MobileIcon';
+import MainCard from './MainCard';
+import ContactCard from './ContactCard';
+import { Global, jsx } from '@emotion/core';
 
-import "./main.css";
+import './main.css';
 
 function Home({ style }) {
   return (
     <div>
-      {console.log(process.env)}
       <Header />
       <Slide />
       <div
@@ -30,6 +29,7 @@ function Home({ style }) {
         <Typography
           className={css`
             margin-left: 30px;
+            font-family: "CircularAirPro-Book", sans-serif, helvetica;
           `}
           variant="h5"
           gutterBottom
@@ -48,11 +48,11 @@ function Home({ style }) {
           margin-bottom: 20px;
           flex-wrap: wrap;
           justify-content: center;
-          align-items:  center;
+          align-items: center;
         `}
       >
         <MainCard />
-        <ContactCard />
+        <ContactCard/>
       </div>
       <Footer />
     </div>
