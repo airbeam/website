@@ -86,7 +86,6 @@ function SimpleCard(props) {
 
       {/**
             <Typography color="textPrimary">Phone: +1 (416) 637-1048</Typography>
-
       
       */}
       <br />

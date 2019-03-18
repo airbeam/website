@@ -77,7 +77,7 @@ const sendEmail = (from, msg, name, setOpen, clear) => {
       /* required */
 
       ToAddresses: [
-        "jfritz50@gmail.com"
+        "sales@airbeamtech.com"
         /* more items */
       ]
     },
