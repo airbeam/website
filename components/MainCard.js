@@ -9,6 +9,11 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import MenuItem from "@material-ui/core/MenuItem";
 import TextField from "@material-ui/core/TextField";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
 
 const styles = theme => ({
   container: {
@@ -18,6 +23,11 @@ const styles = theme => ({
   textField: {
     marginLeft: theme.spacing.unit,
     marginRight: theme.spacing.unit
+  },
+  nametextField: {
+    marginLeft: theme.spacing.unit,
+    marginRight: theme.spacing.unit,
+    width: "70%"
   },
   dense: {
     marginTop: 16
@@ -43,10 +53,7 @@ const styles = theme => ({
     display: "flex",
     flexWrap: "wrap"
   },
-  textField: {
-    marginLeft: theme.spacing.unit,
-    marginRight: theme.spacing.unit
-  },
+
   dense: {
     marginTop: 16
   },
@@ -55,7 +62,7 @@ const styles = theme => ({
   }
 });
 
-const sendEmail = (from, msg, name) => {
+const sendEmail = (from, msg, name, setOpen, clear) => {
   // Load the AWS SDK for Node.js
   // Set the region
   AWS.config.update({
@@ -70,7 +77,7 @@ const sendEmail = (from, msg, name) => {
       /* required */
 
       ToAddresses: [
-        "sales@airbeamtech.com"
+        "jfritz50@gmail.com"
         /* more items */
       ]
     },
@@ -85,13 +92,15 @@ const sendEmail = (from, msg, name) => {
       },
       Subject: {
         Charset: "UTF-8",
-        Data: `Sales Email ${name}`
+        Data: `Sales Email ${name} ${from}`
       }
     },
-    Source: from /* required */,
+    Source: "system@airbeamtech.com" /* required */,
     ReplyToAddresses: [
-      from
-      /* more items */
+      "system@airbeamtech.com"
+      /*
+       from.toLowerCase()
+      more items */
     ]
   };
 
@@ -103,6 +112,12 @@ const sendEmail = (from, msg, name) => {
   // Handle promise's fulfilled/rejected states
   sendPromise
     .then(function(data) {
+      setOpen(true);
+      setTimeout(() => {
+        setOpen(false);
+      }, 2000);
+      clear();
+
       console.log(data.MessageId);
     })
     .catch(function(err) {
@@ -119,10 +134,24 @@ function SimpleCard(props) {
 
   const [message, setMessage] = useState("");
 
+  const [open, setOpen] = React.useState(false);
+
+  function handleClickOpen() {
+    setOpen(true);
+  }
+  const clear = () => {
+    setEmail("");
+    setFirstName("");
+    setLastName("");
+    setMessage("")
+  };
+  function handleClose() {
+    setOpen(false);
+  }
   return (
     <div
       className={css`
-        max-width: 50%;
+        width: 40%;
       `}
     >
       <Typography variant="title" className={classes.title} color="textPrimary">
@@ -139,24 +168,33 @@ function SimpleCard(props) {
         margin="normal"
         variant="outlined"
       />
-      <TextField
-        id="outlined-name"
-        label="First Name"
-        className={classes.textField}
-        value={firstName}
-        onChange={e => setFirstName(e.target.value)}
-        margin="normal"
-        variant="outlined"
-      />
-      <TextField
-        id="outlined-name"
-        label="Last Name"
-        className={classes.textField}
-        value={lastName}
-        onChange={e => setLastName(e.target.value)}
-        margin="normal"
-        variant="outlined"
-      />
+      <div
+        className={css`
+          display: flex;
+          align-self: center;
+          justify-content: center;
+        `}
+      >
+        <TextField
+          id="outlined-name"
+          label="First Name"
+          className={classes.nametextField}
+          value={firstName}
+          onChange={e => setFirstName(e.target.value)}
+          margin="normal"
+          variant="outlined"
+        />
+        <TextField
+          id="outlined-name"
+          label="Last Name"
+          className={classes.nametextField}
+          value={lastName}
+          onChange={e => setLastName(e.target.value)}
+          margin="normal"
+          variant="outlined"
+        />
+      </div>
+
       <TextField
         id="outlined-name"
         label="Message"
@@ -175,13 +213,34 @@ function SimpleCard(props) {
         `}
       >
         <Button
-          onClick={() => sendEmail(email, message, `${firstName} ${lastName}`)}
+          onClick={() =>
+            sendEmail(
+              email,
+              message,
+              `${firstName} ${lastName}`,
+              setOpen,
+              clear
+            )
+          }
           variant="contained"
           color={"primary"}
         >
           Submit
         </Button>
       </div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">{"Message Sent!"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+            Your message has been sent, someone will contact you promptly.
+          </DialogContentText>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

@@ -6,7 +6,7 @@ export default class SimpleSlider extends Component {
   render() {
     const settings = {
       className      : css``,
-      dots           : true,
+      dots           : false,
       infinite       : true,
       slidesToShow   : 1,
       slidesToScroll : 1,

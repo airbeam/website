@@ -45,7 +45,7 @@ function Home({ style }) {
         className={css`
           display: flex;
           margin-top: 20px;
-          margin-bottom: 20px;
+          margin-bottom: 200px;
           flex-wrap: wrap;
           justify-content: center;
           align-items: center;
