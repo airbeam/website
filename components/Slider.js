@@ -21,7 +21,7 @@ export default class SimpleSlider extends Component {
               className={css`
                 width: 100%;
                 @media (max-width: 1000px) {
-                  height: 400px;
+                  height: 500px;
                 }
                 @media (max-width: 420px) {
                   height: 200px;
@@ -38,7 +38,7 @@ export default class SimpleSlider extends Component {
               className={css`
                 width: 100%;
                 @media (max-width: 1000px) {
-                  height: 400px;
+                  height: 500px;
                 }
                 @media (max-width: 420px) {
                   height: 200px;
@@ -55,7 +55,7 @@ export default class SimpleSlider extends Component {
               className={css`
                 width: 100%;
                 @media (max-width: 1000px) {
-                  height: 400px;
+                  height: 500px;
                 }
                 @media (max-width: 420px) {
                   height: 200px;
