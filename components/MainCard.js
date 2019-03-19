@@ -22,7 +22,7 @@ const styles = (theme) => ({
   },
   nametextField : {
     marginLeft  : theme.spacing.unit,
-    marginRight : theme.spacing.unit
+    marginRight : theme.spacing.unit * 2
   },
   dense         : {
     marginTop : 16
