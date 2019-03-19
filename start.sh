@@ -1,5 +1,5 @@
 cd /home/ubuntu/website
 yarn
 yarn run build
-cp ../../ubuntu/../ubuntu/.env ./.env
+cp /home/ubuntu/env/env /home/ubuntu/website/.env
 pm2 start 'yarn start'
