@@ -11,8 +11,7 @@ export default class SimpleSlider extends Component {
       slidesToShow   : 1,
       slidesToScroll : 1,
       adaptiveHeight : true,
-      autoplay: true
-
+      autoplay       : true
     };
     return (
       <div className={css`width: 100%;`}>
@@ -23,6 +22,10 @@ export default class SimpleSlider extends Component {
                 width: 100%;
                 @media (max-width: 1000px) {
                   height: 400px;
+                }
+                @media (max-width: 420px) {
+                  height: 200px;
+                  width: 500px;
                 }
               `}
               src="/static/carousel_a.png"
@@ -37,6 +40,10 @@ export default class SimpleSlider extends Component {
                 @media (max-width: 1000px) {
                   height: 400px;
                 }
+                @media (max-width: 420px) {
+                  height: 200px;
+                  width: 500px;
+                }
               `}
               src="/static/carousel_b.png"
               alt="carousel_a"
@@ -49,6 +56,10 @@ export default class SimpleSlider extends Component {
                 width: 100%;
                 @media (max-width: 1000px) {
                   height: 400px;
+                }
+                @media (max-width: 420px) {
+                  height: 200px;
+                  width: 500px;
                 }
               `}
               src="/static/carousel_c.png"
@@ -77,6 +88,10 @@ const TextBlock = () => (
       color: #ffffff;
       letter-spacing: 0;
       line-height: 50px;
+      @media (max-width: 420px) {
+        font-size: 18px;
+   
+      }
     `}
   >
     Airbeam’s 60 GHz WiHD and WiGig <br />
