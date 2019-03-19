@@ -89,9 +89,9 @@ const sendEmail = (from, msg, name, setOpen, clear) => {
         Data    : `Sales Email ${name} ${from}`
       }
     },
-    Source           : 'system@airbeamtech.com' /* required */,
+    Source           : 'sales@airbeamtech.com' /* required */,
     ReplyToAddresses : [
-      'system@airbeamtech.com'
+      from
       /*
        from.toLowerCase()
       more items */
