@@ -70,6 +70,11 @@ function SimpleCard(props) {
     <div
       className={css`
         margin-left: 100px;
+        @media (max-width: 420px) {
+          margin-top: 20px;
+          margin-right: 100px;
+        
+      }
       `}
     >
       <Typography className={classes.title} color="textPrimary">
