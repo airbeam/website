@@ -69,10 +69,10 @@ function SimpleCard(props) {
   return (
     <div
       className={css`
-        margin-left: 100px;
+        margin-left: 200px;
         @media (max-width: 420px) {
           margin-top: 20px;
-          margin-right: 100px;
+          margin-left: 120px;
         }
       `}
     >

@@ -10,7 +10,6 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
-
 const styles = (theme) => ({
   container     : {
     display  : 'flex',
@@ -157,10 +156,12 @@ function SimpleCard(props) {
     setOpen(false);
   }
   return (
-    <div className={css`
-    padding: 2
-    
-    `} >
+    <div
+      className={css`
+        max-width: 40%;
+        margin-left: 100px;
+      `}
+    >
       <Typography className={classes.title} color="textPrimary">
         Sales
       </Typography>
@@ -168,56 +169,49 @@ function SimpleCard(props) {
       <TextField
         id="outlined-name"
         label="Email"
-        fullWidth
-        className={classes.textField}
+        className={css`
+          margin-left: 20px;
+          width: 90%;
+        `}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         margin="normal"
         variant="outlined"
       />
-      <div className={css``}>
-        <div
-          className={css`
-            display: inline;
-            margin-left: auto;
-            margin-right: auto;
-            width: 40%;
-          `}
-        >
-          <TextField
-            id="outlined-name"
-            label="First Name"
-            className={classes.nametextField}
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            margin="normal"
-            variant="outlined"
-          />
-          <TextField
-            id="outlined-name"
-            label="Last Name"
-            className={classes.nametextField}
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-            margin="normal"
-            variant="outlined"
-          />
-        </div>
-      </div>
-
+      <TextField
+        id="outlined-name"
+        label="First Name"
+        className={css`margin-left: 20px;`}
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+        margin="normal"
+        variant="outlined"
+      />
+      <TextField
+        id="outlined-name"
+        label="Last Name"
+        className={css`margin-left: 20px;`}
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+        margin="normal"
+        variant="outlined"
+      />
       <TextField
         id="outlined-name"
         label="Message"
-        className={classes.textField}
+        className={css`
+          margin-left: 20px;
+          width: 90%;
+        `}
         multiline
         rows="5"
-        fullWidth
+        //  fullWidth
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         margin="normal"
         variant="outlined"
       />
-      <div className={css`margin-left: 10px;`}>
+      <div className={css`margin-left: 20px;`}>
         <Button
           onClick={() => sendEmail(email, message, `${firstName} ${lastName}`, setOpen, clear)}
           variant="contained"
@@ -248,21 +242,3 @@ SimpleCard.propTypes = {
 };
 
 export default withStyles(styles)(SimpleCard);
-
-/**
- </CardContent>
-
-</Card>
-
-
-    <Card className={classes.card}>
-      <CardContent>
-
- * 
- * 
- *       <CardActions>
-        <Button size="small">Submit</Button>
-      </CardActions>
- * 
- * 
- */

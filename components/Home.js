@@ -47,12 +47,10 @@ function Home({ style }) {
           margin-top: 20px;
           margin-bottom: 200px;
           flex-wrap: wrap;
-          justify-content: center;
-          align-items: center;
         `}
       >
         <MainCard />
-        <ContactCard/>
+        <ContactCard />
       </div>
       <Footer />
     </div>
