@@ -38,7 +38,7 @@ const styles = (theme) => ({
     transform : 'scale(0.8)'
   },
   title         : {
-    fontSize : 24
+    fontSize : 18
   },
   pos           : {
     marginBottom : 12
@@ -163,7 +163,7 @@ function SimpleCard(props) {
       `}
     >
       <Typography className={classes.title} color="textPrimary">
-        Sales
+      Get in touch with our dedicated support team for more information.
       </Typography>
 
       <TextField

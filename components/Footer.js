@@ -1,5 +1,6 @@
 import React from 'react';
 import { css } from 'emotion';
+import Social from './Social'
 
 const Footer = ({ style }) => (
   <footer
@@ -19,6 +20,8 @@ const Footer = ({ style }) => (
         padding-left: 20px;
         padding-right: 20px;
         max-width: 1040px;
+        align-items: center;
+        justify-content: space-between;
       `}
     >
       <section
@@ -38,8 +41,21 @@ const Footer = ({ style }) => (
             alt="AirBeam Logo"
           />
         </a>
+        
       </section>
+      <div
+        className={css`
+        display: flex;
+        margin-bottom: 20px;
+        flex-direction: column;
+      
+        `}
+      >
+      <Social copy={true}/>
+      </div>
+     
     </div>
+  
   </footer>
 );
 
