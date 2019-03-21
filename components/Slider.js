@@ -43,7 +43,7 @@ export default class SimpleSlider extends Component {
             />
             <TextBlock
               text1="Airbeam is shaping the future"
-              text2="of wireless 5G backhaul"
+              text2="of 5G wireless backhaul"
             />
           </div>
           <div
