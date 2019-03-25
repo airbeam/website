@@ -160,6 +160,7 @@ function SimpleCard(props) {
       className={css`
         max-width: 40%;
         margin-left: 100px;
+        
       `}
     >
       <Typography className={classes.title} color="textPrimary">

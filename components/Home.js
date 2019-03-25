@@ -34,7 +34,7 @@ function Home({ style }) {
           variant="h5"
           gutterBottom
         >
-       Airbeam will continue to service <br/> Lattice Semiconductor customers  <br/> for WiHD and WiGig/Gigaray  
+          Airbeam will continue to service <br /> Lattice Semiconductor customers <br /> for WiHD and WiGig/Gigaray
         </Typography>
       </div>
 

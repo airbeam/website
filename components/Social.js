@@ -3,7 +3,7 @@ import { css } from "emotion";
 import Link from "next/link";
 import TouchRipple from "@material-ui/core/ButtonBase/TouchRipple";
 
-const Social = ({ copy }) => (
+const Social = ({ copy, marginRight = 20 }) => (
   <div
     className={css`
       display: flex;
@@ -17,6 +17,9 @@ const Social = ({ copy }) => (
           color: #b0bec5;
           margin-right: 20px;
           margin-top: 2px;
+          @media (max-width: 420px) {
+            font-size: 8px;
+          }
         `}
       >
         © 2019 Airbeam Inc

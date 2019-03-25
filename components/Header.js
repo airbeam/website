@@ -1,7 +1,6 @@
-import React from "react";
-import { css } from "emotion";
+import React from 'react';
+import { css } from 'emotion';
 import Social from './Social';
-
 
 const Header = ({ style }) => (
   <header
@@ -17,8 +16,7 @@ const Header = ({ style }) => (
       width: 100%;
       height: 110px;
       opacity: 100;
-      transition: background-color 200ms ease-out, opacity 200ms ease-out,
-        box-shadow 200ms ease-out;
+      transition: background-color 200ms ease-out, opacity 200ms ease-out, box-shadow 200ms ease-out;
     `}
   >
     <div
@@ -48,7 +46,9 @@ const Header = ({ style }) => (
         </a>
       </div>
     </div>
-  <Social/>
+ 
+      <Social marginRight={40}/>
+
   </header>
 );
 

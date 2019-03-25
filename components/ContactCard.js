@@ -87,7 +87,7 @@ function SimpleCard(props) {
         Canada
       </Typography>
       <br />
-      <Typography color="textPrimary">Phone: (778) 338-8047</Typography>
+      <Typography color="textPrimary">Phone:(778)338-8047</Typography>
       {/**
             <Typography color="textPrimary">Phone: +1 (416) 637-1048</Typography>
       
