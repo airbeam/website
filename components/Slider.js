@@ -1,22 +1,32 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
-import { css } from 'emotion';
+import React, { Component } from "react";
+import Slider from "react-slick";
+import { css } from "emotion";
 
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      className      : css``,
-      dots           : false,
-      infinite       : true,
-      slidesToShow   : 1,
-      slidesToScroll : 1,
-      adaptiveHeight : true,
-      autoplay       : true
+      className: css``,
+      dots: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 4000
+
     };
     return (
-      <div className={css`width: 100%;`}>
+      <div
+        className={css`
+          width: 100%;
+        `}
+      >
         <Slider {...settings}>
-          <div className={css`position: relative;`}>
+          <div
+            className={css`
+              position: relative;
+            `}
+          >
             <img
               className={css`
                 width: 100%;
@@ -31,9 +41,16 @@ export default class SimpleSlider extends Component {
               src="/static/carousel_a.png"
               alt="carousel_a"
             />
-            <TextBlock />
+            <TextBlock
+              text1="Airbeam is shaping the future"
+              text2="of 5G wireless backhaul"
+            />
           </div>
-          <div className={css`position: relative;`}>
+          <div
+            className={css`
+              position: relative;
+            `}
+          >
             <img
               className={css`
                 width: 100%;
@@ -48,9 +65,16 @@ export default class SimpleSlider extends Component {
               src="/static/carousel_b.png"
               alt="carousel_a"
             />
-            <TextBlock />
+            <TextBlock
+              text1="Airbeam links IoT to the"
+              text2="5G networks of the future"
+            />
           </div>
-          <div className={css`position: relative;`}>
+          <div
+            className={css`
+              position: relative;
+            `}
+          >
             <img
               className={css`
                 width: 100%;
@@ -65,7 +89,10 @@ export default class SimpleSlider extends Component {
               src="/static/carousel_c.png"
               alt="carousel_a"
             />
-            <TextBlock />
+            <TextBlock 
+            text1="Shaping the future of 60 GHz"
+            text2="wireless communication"
+            />
           </div>
         </Slider>
       </div>
@@ -73,7 +100,7 @@ export default class SimpleSlider extends Component {
   }
 }
 
-const TextBlock = () => (
+const TextBlock = ({ text1, text2 }) => (
   <h2
     className={css`
       position: absolute;
@@ -90,12 +117,11 @@ const TextBlock = () => (
       line-height: 50px;
       @media (max-width: 420px) {
         font-size: 18px;
-   
       }
     `}
   >
-    Airbeam’s 60 GHz WiHD and WiGig <br />
-    products offers real-time, low latency, <br />
-    wireless communication
+    {text1}
+    <br />
+    {text2}
   </h2>
 );
