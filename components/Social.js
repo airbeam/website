@@ -25,7 +25,7 @@ const Social = ({ copy, marginRight = 20 }) => (
         © 2019 Airbeam Inc
       </div>
     )}
-    <Link href="https://www.facebook.com/Airbeam-60Ghz-341470866711898/">
+    <Link href="https://www.facebook.com/AirBeamTech/">
       <a target="_blank">
         <svg
           className={css`
@@ -47,7 +47,7 @@ const Social = ({ copy, marginRight = 20 }) => (
     </Link>
 
 
-    <Link href="https://twitter.com/A60ghz">
+    <Link href="https://twitter.com/airbeamhq">
       <a target="_blank">
       <svg
       className={css`
@@ -68,7 +68,7 @@ const Social = ({ copy, marginRight = 20 }) => (
       </a>
     </Link>
 
-    <Link href="https://www.linkedin.com/company/airbeam-60ghz/">
+    <Link href="https://www.linkedin.com/company/airbeam">
       <a target="_blank">
       <svg
       className={css`
