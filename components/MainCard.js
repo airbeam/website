@@ -172,6 +172,9 @@ function SimpleCard(props) {
         className={css`
           margin-left: 20px;
           width: 90%;
+          @media (max-width: 420px) {
+            width: 100%;
+          }
         `}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -181,7 +184,12 @@ function SimpleCard(props) {
       <TextField
         id="outlined-name"
         label="First Name"
-        className={css`margin-left: 20px;`}
+        className={css`
+          margin-left: 20px;
+          @media (max-width: 420px) {
+            width: 100%;
+          }
+        `}
         value={firstName}
         onChange={(e) => setFirstName(e.target.value)}
         margin="normal"
@@ -190,7 +198,12 @@ function SimpleCard(props) {
       <TextField
         id="outlined-name"
         label="Last Name"
-        className={css`margin-left: 20px;`}
+        className={css`
+          margin-left: 20px;
+          @media (max-width: 420px) {
+            width: 100%;
+          }
+        `}
         value={lastName}
         onChange={(e) => setLastName(e.target.value)}
         margin="normal"
@@ -202,6 +215,9 @@ function SimpleCard(props) {
         className={css`
           margin-left: 20px;
           width: 90%;
+          @media (max-width: 420px) {
+            width: 100%;
+          }
         `}
         multiline
         rows="5"
@@ -213,6 +229,12 @@ function SimpleCard(props) {
       />
       <div className={css`margin-left: 20px;`}>
         <Button
+          className={css`
+            margin-top: 10px;
+            @media (max-width: 420px) {
+              width: 100%;
+            }
+          `}
           onClick={() => sendEmail(email, message, `${firstName} ${lastName}`, setOpen, clear)}
           variant="contained"
           color={'primary'}
