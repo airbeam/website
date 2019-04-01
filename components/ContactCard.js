@@ -93,7 +93,7 @@ function SimpleCard(props) {
       
       */}
       <br />
-      <Typography color="primary">sales@airbeam.com</Typography>
+      <Typography color="primary">sales@airbeamtech.com</Typography>
     </div>
   );
 }
