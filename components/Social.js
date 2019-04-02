@@ -3,11 +3,11 @@ import { css } from "emotion";
 import Link from "next/link";
 import TouchRipple from "@material-ui/core/ButtonBase/TouchRipple";
 
-const Social = ({ copy, marginRight = 20 }) => (
+const Social = ({ copy, marginRight = 20, foot }) => (
   <div
     className={css`
       display: flex;
-      margin-right: 20px;
+      margin-right: ${foot ? "-100px": '20px'};
       align-items: center;
     `}
   >
@@ -15,7 +15,7 @@ const Social = ({ copy, marginRight = 20 }) => (
       <div
         className={css`
           color: #b0bec5;
-          margin-right: 20px;
+          margin-right: 25px;
           margin-top: 2px;
           @media (max-width: 420px) {
             font-size: 8px;
@@ -30,7 +30,7 @@ const Social = ({ copy, marginRight = 20 }) => (
         <svg
           className={css`
             margin-top: 2px;
-          margin-left: -20px;
+          margin-left: -25px;
           `}
           xmlns="http://www.w3.org/2000/svg"
           id="Layer_1"
@@ -52,7 +52,7 @@ const Social = ({ copy, marginRight = 20 }) => (
       <svg
       className={css`
         margin-top: 2px;
-        margin-right: 14px;
+        margin-right: 8px;
       `}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="4 4 23 24"

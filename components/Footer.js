@@ -30,11 +30,20 @@ const Footer = ({ style }) => (
           position: relative;
           z-index: 2;
           display: flex;
+          justify-content: center;
+          align-items: center;
         `}
       >
-        <a href="/" className={css`margin-bottom: 50px;`}>
+        <a href="/" className={css`margin-bottom: 50px;
+          margin-top: 20px;
+        
+        
+        `}>
           <img
             className={css`
+            display: flex;
+       
+            
               width: 234px;
               margin-top: 20px;
               @media (max-width: 420px) {
@@ -53,7 +62,7 @@ const Footer = ({ style }) => (
           flex-direction: column;
         `}
       >
-        <Social copy={true} />
+        <Social copy={true} foot/>
       </div>
     </div>
   </footer>
