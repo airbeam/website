@@ -10,6 +10,7 @@ const Footer = ({ style }) => (
       flex-direction: column;
       background-color: #f7f7f7;
       overflow: hidden;
+      width: 100%;
     `}
   >
     <div

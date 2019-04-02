@@ -70,7 +70,7 @@ function SimpleCard(props) {
     <div
       className={css`
         margin-left: 200px;
-        @media (max-width: 420px) {
+        @media (max-width: 780px) {
           margin-top: 20px;
           margin-left: 120px;
         }

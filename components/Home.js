@@ -14,7 +14,11 @@ import './main.css';
 
 function Home({ style }) {
   return (
-    <div>
+    <div
+    className={css`
+
+  `}
+    >
       <Header />
       <Slide />
       <div
@@ -22,6 +26,7 @@ function Home({ style }) {
           display: flex;
           margin-left: 40px;
           margin-top: 20px;
+          width: 80%;
         `}
       >
         <MobileIcon />

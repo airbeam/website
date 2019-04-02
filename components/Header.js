@@ -13,6 +13,7 @@ const Header = ({ style }) => (
       z-index: 900;
       display: flex;
       align-items: center;
+
       width: 100%;
       height: 110px;
       opacity: 100;
@@ -38,7 +39,7 @@ const Header = ({ style }) => (
           href="/"
           className={css`
             margin-left: 8px;
-
+            margin-top: 10px;
             display: flex;
           `}
         >
@@ -46,9 +47,8 @@ const Header = ({ style }) => (
         </a>
       </div>
     </div>
- 
-      <Social marginRight={40}/>
 
+    <Social marginRight={40} />
   </header>
 );
 

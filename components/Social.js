@@ -30,7 +30,7 @@ const Social = ({ copy, marginRight = 20 }) => (
         <svg
           className={css`
             margin-top: 2px;
-            margin-right: 10px;
+          margin-left: -20px;
           `}
           xmlns="http://www.w3.org/2000/svg"
           id="Layer_1"
