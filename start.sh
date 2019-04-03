@@ -1,5 +1,5 @@
 cd /home/ubuntu/website
-sudo pm2 kill
-sudo yarn
-sudo yarn run build
-sudo pm2 start server.js
+yarn
+yarn run build
+cp /home/ubuntu/env/env /home/ubuntu/website/.env
+pm2 start 'yarn start'

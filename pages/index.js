@@ -1,5 +1,11 @@
-function Home() {
-  return <div>Welcome to Next.js!</div>
+import Home from "../components/Home";
+function Index() {
+  return(
+  
+      <Home />
+  )
+  
+
 }
 
-export default Home
+export default Index;

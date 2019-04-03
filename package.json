@@ -1,8 +1,24 @@
 {
   "dependencies": {
-    "next": "^8.0.3",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "^3.0.2",
+    "@zeit/next-css": "^1.0.1",
+    "babel-plugin-emotion": "^10.0.9",
+    "dotenv-webpack": "^1.7.0",
+    "emotion": "^10.0.9",
+    "jss": "latest",
+    "next": "latest",
+    "next-fonts": "^0.17.0",
+    "normalize.css": "^8.0.1",
+    "prop-types": "latest",
+    "pure-react-carousel": "^1.19.0",
+    "react": "latest",
+    "react-animated-slider": "^1.1.4",
+    "react-dom": "^16.8.4",
+    "react-jss": "^8.6.1",
+    "react-slick": "^0.23.2"
   },
   "scripts": {
     "dev": "next",

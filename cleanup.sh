@@ -1,1 +1,2 @@
-sudo rm -rf /home/ubuntu/website
+pm2 kill
+rm -rf /home/ubuntu/website
