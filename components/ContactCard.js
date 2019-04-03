@@ -97,7 +97,7 @@ function SimpleCard(props) {
         href="tel:+17783388047"
         target="_top"
       >
-        Phone:+1-778-338-8047
+        Phone: +1(778)-338-8047
       </a>
  
       <br />
