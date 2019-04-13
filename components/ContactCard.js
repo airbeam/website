@@ -42,7 +42,9 @@ const styles = (theme) => ({
     transform : 'scale(0.8)'
   },
   title     : {
-    fontSize : 24
+    fontSize : 24,
+    fontFamily: 'CircularAirPro-Book'
+
   },
   pos       : {
     marginBottom : 12
@@ -73,6 +75,7 @@ function SimpleCard(props) {
         @media (max-width: 780px) {
           margin-top: 20px;
           margin-left: 120px;
+
         }
       `}
     >
@@ -80,7 +83,13 @@ function SimpleCard(props) {
         Contact Us
       </Typography>
       <br />
-      <Typography color="textPrimary">
+      <Typography
+      
+      className={css`
+          font-family: 'CircularAirPro-Light';
+
+      `}
+      color="textPrimary">
         21320 Gordon Way #125
         <br />
         Richmond, BC V6W 1J8 <br />
@@ -93,17 +102,20 @@ function SimpleCard(props) {
           font-weight: bold;
           font: outline;
           text-decoration: none;
+          font-family: 'CircularAirPro-Light';
+
         `}
         href="tel:+17783388047"
         target="_top"
       >
-        Phone: +1(778)-338-8047
+        Phone: +1 (778) 338-8047
       </a>
  
       <br />
       <br />
       <a
         className={css`
+          font-family: 'CircularAirPro-Light';
           color: #6b6b6d;
           font-weight: bold;
           font: outline;
