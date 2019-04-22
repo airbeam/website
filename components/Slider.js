@@ -32,7 +32,10 @@ export default class SimpleSlider extends Component {
               src="/static/carousel_a.png"
               alt="carousel_a"
             />
-            <TextBlock text1="Airbeam is shaping the future" text2="of 5G wireless backhaul" />
+            <TextBlock
+            
+            
+            text1="Airbeam is shaping the future" text2="of 5G wireless backhaul" />
           </div>
           <div className={css`position: relative;`}>
             <img
@@ -81,6 +84,7 @@ const TextBlock = ({ text1, text2 }) => (
       top: 20px;
       left: 20px;
       background-color: transparent;
+      font-family: "CircularAirPro-Light";
       color: white;
       padding-left: 20px;
       padding-right: 20px;
